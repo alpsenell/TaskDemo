@@ -50,15 +50,36 @@
 
                 if (this.selectedView === CommonEnums.LOGIN) {
                     await this.$http.post(
-                        ApiEnums.LOGIN, this.userInputValues[this.selectedViewLowerCase]
+                        ApiEnums.LOGIN,
+                        this.userInputValues[this.selectedViewLowerCase],
+                        {
+                            headers: {
+                                'content-type': 'application/json',
+                                accept: 'application/json'
+                            }
+                        }
                     );
                 } else if (this.selectedView === CommonEnums.REGISTER) {
                     await this.$http.post(
-                        ApiEnums.REGISTER, this.userInputValues[this.selectedViewLowerCase]
+                        ApiEnums.REGISTER,
+                        this.userInputValues[this.selectedViewLowerCase],
+                        {
+                            headers: {
+                                'content-type': 'application/json',
+                                accept: 'application/json'
+                            }
+                        }
                     );
                 } else if (this.selectedView === CommonEnums.UPDATE) {
                     await this.$http.post(
-                        ApiEnums.USER_UPDATE, this.userInputValues[this.selectedViewLowerCase]
+                        ApiEnums.USER_UPDATE,
+                        this.userInputValues[this.selectedViewLowerCase],
+                        {
+                            headers: {
+                                'content-type': 'application/json',
+                                accept: 'application/json'
+                            }
+                        }
                     );
                 }
             }
