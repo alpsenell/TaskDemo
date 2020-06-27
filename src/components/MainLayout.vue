@@ -36,6 +36,7 @@
 <style scoped lang="scss">
     #mainLayout {
         width: 50%;
+        max-width: 600px;
         display: flex;
         align-items: center;
         justify-content: center;
