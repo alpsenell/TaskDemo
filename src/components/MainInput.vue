@@ -1,6 +1,11 @@
 <template>
     <div>
-        <input @keyup="validate" v-model="inputValue" :type="type" :placeholder="placeholder"/>
+        <input
+                @keyup="validate"
+                v-model="inputValue"
+                :type="type"
+                :name="name"
+                :placeholder="placeholder"/>
         <p v-if="errors.length > 0" class="errorInput">{{ errorMessage }}</p>
     </div>
 </template>
@@ -39,12 +44,18 @@
                 default: 'text'
             },
             /**
+             * @property {string} name
+             */
+            name: {
+                type: String
+            },
+            /**
              * @property {string} errorMessage
              */
             errorMessage: {
                 type: String,
                 default: 'Please enter a valid value!'
-            },
+            }
         },
 
         computed: {
@@ -62,7 +73,8 @@
 
         methods: {
             ...mapActions('COMMON_STORE',[
-                'setInputValue'
+                'setInputValue',
+                'setInputError'
             ]),
 
             /**
@@ -73,13 +85,16 @@
 
                 if (isErrorPresent) {
                     this.errors.push('error');
+
+                    this.setInputError(true);
                 } else {
                     this.errors = [];
+                    this.setInputError(false);
 
                     this.setInputValue({
                         viewType: this.selectedViewLowerCase,
                         inputValue: this.inputValue,
-                        inputType: this.type
+                        inputType: this.name
                     })
                 }
             }

@@ -1,14 +1,17 @@
 <template>
     <div id="login">
+        <div class="forgotPassword">Forgot Password?</div>
         <main-input
                 :placeholder="email"
                 error-message="Please enter a valid email"
-                type="email">
+                type="email"
+                name="email">
         </main-input>
         <main-input
                 :placeholder="password"
                 error-message="Please enter at least 8 characters"
-                type="password">
+                type="password"
+                name="password">
         </main-input>
     </div>
 </template>
@@ -34,4 +37,10 @@
 </script>
 
 <style scoped lang="scss">
+    .forgotPassword {
+        cursor: pointer;
+        color: #fefefe;
+        font-size: 12px;
+        text-align: right;
+    }
 </style>

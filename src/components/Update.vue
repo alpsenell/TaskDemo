@@ -2,26 +2,31 @@
     <div id="login">
         <main-input
                 :placeholder="name"
-                type="text">
+                type="text"
+                name="name">
         </main-input>
         <main-input
                 :placeholder="lastName"
-                type="text">
+                type="text"
+                name="lastName">
         </main-input>
         <main-input
                 :placeholder="email"
                 error-message="Please enter a valid email"
-                type="email">
+                type="email"
+                name="email">
         </main-input>
         <main-input
                 :placeholder="password"
                 error-message="Please enter at least 8 characters"
-                type="password">
+                type="password"
+                name="password">
         </main-input>
         <main-input
                 :placeholder="passwordConfirmation"
                 error-message="Please enter at least 8 characters"
-                type="password">
+                type="password"
+                name="passwordConfirmation">
         </main-input>
     </div>
 </template>

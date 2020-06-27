@@ -1,19 +1,24 @@
 export default {
     selectedView: 'Login',
-    update: {
-        name: '',
-        lastName: '',
-        email: '',
-        password: ''
+    userInputValues: {
+        update: {
+            name: '',
+            lastName: '',
+            email: '',
+            password: '',
+            passwordConfirmation: ''
+        },
+        login: {
+            email: '',
+            password: ''
+        },
+        register: {
+            name: '',
+            lastName: '',
+            email: '',
+            password: '',
+            passwordConfirmation: ''
+        }
     },
-    login: {
-        email: '',
-        password: ''
-    },
-    register: {
-        name: '',
-        lastName: '',
-        email: '',
-        password: ''
-    }
+    isInputErrorPresent: true
 };

@@ -2,6 +2,7 @@
     <div id="mainLayout">
         <views></views>
         <component class="activeComponent" v-bind:is="selectedView"></component>
+        <save-button></save-button>
     </div>
 </template>
 
@@ -11,11 +12,13 @@
     import Register from './Register.vue';
     import Update from './Update.vue';
     import Views from './Views';
+    import SaveButton from './SaveButton';
 
     export default {
         name: 'MainLayout',
 
         components: {
+            SaveButton,
             Views,
             Login,
             Register,

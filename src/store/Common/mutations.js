@@ -16,6 +16,15 @@ export default {
      * @param {{ viewType: string, inputValue: string, type: string }}
      */
     [Mutation.SET_INPUT_VALUE] (state, { viewType, inputValue, inputType }) {
-        state[viewType][inputType] = inputValue;
+        state.userInputValues[viewType][inputType] = inputValue;
+    },
+
+    /**
+     * @name setInputError
+     * @param {object} state
+     * @param {boolean} isErrorPresent
+     */
+    [Mutation.SET_INPUT_ERROR] (state, isErrorPresent) {
+        state.isInputErrorPresent = isErrorPresent;
     }
 };

@@ -3,7 +3,6 @@
  */
 class CommonEnums {
     constructor () {
-        this.USERNAME = 'Username';
         this.PASSWORD = 'Password';
         this.NAME = 'Name';
         this.LAST_NAME = 'Last Name';

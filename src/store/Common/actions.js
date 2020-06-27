@@ -21,5 +21,14 @@ export default {
      */
     [Action.SET_INPUT_VALUE] ({ commit }, data) {
         commit(Mutation.SET_INPUT_VALUE, data)
+    },
+
+    /**
+     * @name setInputError
+     * @param {function} [commit]
+     * @param {boolean} isErrorPresent
+     */
+    [Action.SET_INPUT_ERROR] ({ commit }, isErrorPresent) {
+        commit(Mutation.SET_INPUT_ERROR, isErrorPresent)
     }
 };
