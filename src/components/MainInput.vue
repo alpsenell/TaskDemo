@@ -6,6 +6,8 @@
 </template>
 
 <script>
+    import { mapActions, mapGetters } from 'vuex';
+
     export default {
         name: 'MainInput',
 
@@ -45,15 +47,40 @@
             },
         },
 
+        computed: {
+            ...mapGetters('COMMON_STORE', {
+                selectedView: 'getSelectedView'
+            }),
+
+            /**
+             * @return {string}
+             */
+            selectedViewLowerCase () {
+                return this.selectedView.toLowerCase();
+            }
+        },
+
         methods: {
+            ...mapActions('COMMON_STORE',[
+                'setInputValue'
+            ]),
+
+            /**
+             * @return {void}
+             */
             validate () {
-                /* eslint-disable no-debugger, no-console */
                 const isErrorPresent = this.inputValue.match(this.regEx[this.type]) === null;
 
-                if (isErrorPresent){
+                if (isErrorPresent) {
                     this.errors.push('error');
                 } else {
                     this.errors = [];
+
+                    this.setInputValue({
+                        viewType: this.selectedViewLowerCase,
+                        inputValue: this.inputValue,
+                        inputType: this.type
+                    })
                 }
             }
         }

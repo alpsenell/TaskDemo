@@ -10,7 +10,16 @@ export default {
      * @param {function} [commit]
      * @param {String} viewType
      */
-    async [Action.SET_SELECTED_VIEW] ({ commit }, viewType) {
+    [Action.SET_SELECTED_VIEW] ({ commit }, viewType) {
         commit(Mutation.SET_SELECTED_VIEW, viewType);
+    },
+
+    /**
+     * @name setInputValue
+     * @param {function} [commit]
+     * @param {object} data
+     */
+    [Action.SET_INPUT_VALUE] ({ commit }, data) {
+        commit(Mutation.SET_INPUT_VALUE, data)
     }
 };
