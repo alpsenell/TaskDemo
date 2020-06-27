@@ -20,7 +20,7 @@
         margin: 0;
         padding: 0;
         overflow: auto;
-        background-color: #2c2b2c;
+        background-color: #fafafa;
         width: 100vw;
         height: 100vh;
         #app {

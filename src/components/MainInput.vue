@@ -104,12 +104,12 @@
 
 <style scoped lang="scss">
     input {
-        font-size: 16px;
+        font-size: 14px;
         background-color: transparent;
         border: none;
         -webkit-box-shadow: none;
         box-shadow: none;
-        border-bottom: 1px solid #fefefe;
+        border-bottom: 1px solid #fafafa;
         color: #fefefe;
         height: 40px;
         width: 100%;
@@ -122,7 +122,9 @@
         }
     }
     .errorInput {
-        color: #af2727;
+        color: #fafafa;
+        font-size: 12px;
         margin: 0;
+        font-weight: bold;
     }
 </style>

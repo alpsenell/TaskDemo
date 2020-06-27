@@ -95,6 +95,10 @@
         margin-top: 10px;
         padding: 10px 30px;
         cursor: pointer;
+        width: 50%;
+        background-color: #fafafa;
+        color: #264463;
+        font-weight: bold;
         &.disable {
             pointer-events: none;
             opacity: 0.6;

@@ -44,11 +44,11 @@
     .view {
         margin: 0 10px;
         cursor: pointer;
-        color: #2c2b2c;
+        color: #264463;
         flex-grow: 1;
         &.activeView {
-            color: #fefefe;
-            border-bottom: 1px solid #fefefe;
+            color: #fafafa;
+            border-bottom: 1px solid #fafafa;
         }
     }
 </style>
