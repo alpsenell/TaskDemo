@@ -1,10 +1,13 @@
 <template>
     <div id="login">
         <main-input
-                :placeholder="username">
+                :placeholder="email"
+                error-message="Please enter a valid email"
+                type="email">
         </main-input>
         <main-input
                 :placeholder="password"
+                error-message="Please enter at least 8 characters"
                 type="password">
         </main-input>
     </div>
@@ -23,7 +26,7 @@
 
         data () {
             return {
-                username: CommonEnums.USERNAME,
+                email: CommonEnums.EMAIL,
                 password: CommonEnums.PASSWORD
             }
         }

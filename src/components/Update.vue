@@ -31,7 +31,7 @@
     import CommonEnums from '../enums/CommonEnums';
 
     export default {
-        name: 'Register',
+        name: 'Update',
 
         components: {
             MainInput

@@ -44,7 +44,8 @@
     .view {
         margin: 0 10px;
         cursor: pointer;
-        color: #808080;
+        color: #2c2b2c;
+        flex-grow: 1;
         &.activeView {
             color: #fefefe;
             border-bottom: 1px solid #fefefe;

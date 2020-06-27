@@ -45,6 +45,10 @@
     }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+    #views {
+        display: flex;
+        margin-bottom: 50px;
+        width: 100%;
+    }
 </style>
