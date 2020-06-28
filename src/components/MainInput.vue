@@ -1,6 +1,7 @@
 <template>
     <div>
         <input
+                autocomplete="off"
                 @keyup="validate"
                 v-model="inputValue"
                 :type="type"
@@ -106,19 +107,21 @@
     input {
         font-size: 14px;
         background-color: transparent;
-        border: none;
-        -webkit-box-shadow: none;
+        border: 2px solid #fafafa;
         box-shadow: none;
-        border-bottom: 1px solid #fafafa;
-        color: #fefefe;
+        opacity: 0.6;
+        color: #fafafa;
         height: 40px;
         width: 100%;
         margin: 10px 0;
+        border-radius: 20px;
+        padding-left: 20px;
         &::placeholder {
-            color: #fefefe;
+            color: #fafafa;
         }
         &:focus {
             outline: none;
+            opacity: 1;
         }
     }
     .errorInput {

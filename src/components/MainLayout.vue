@@ -41,7 +41,8 @@
 
 <style scoped lang="scss">
     #mainLayout {
-        min-height: 490px;
+        min-height: 600px;
+        max-width: 1200px;
         width: 80%;
         display: flex;
         border-radius: 10px;

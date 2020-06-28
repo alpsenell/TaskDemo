@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-
 import COMMON_STORE from './Common/index';
 
 Vue.use(Vuex);
